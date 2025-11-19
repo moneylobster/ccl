@@ -1245,7 +1245,7 @@
                                  (list arglist label (if type :colon '(:comment (:plain)))))))
                        (list (list (ccl::lfun-bits o) "Bits" :colon))
                        (list (list (ccl::%lfun-info o) "Plist" :colon))
-                       (when doc (list (list (substitute #\space #\newline doc) "Documentation" :colon)))
+                       (when doc (list (list doc "Documentation" :colon)))
                        (when sn (list (list sn "Source Location" :colon))))))
     (setf (slot-value f 'header-lines) lines)))
 
